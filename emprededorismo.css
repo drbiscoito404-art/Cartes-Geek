@@ -1,0 +1,687 @@
+:root {
+    --bg: #050505;
+    --panel: #0b0b0b;
+    --text: #f5f5f2;
+    --muted: #92928e;
+    --line: rgba(255,255,255,.09);
+
+    --lime: #c6f36b;
+    --lime-dark: rgba(198,243,107,.13);
+
+    --max: 1240px;
+}
+
+
+/* =========================
+   BASE
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 60px;
+
+    background-color: var(--bg);
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 80px 80px;
+
+    color: var(--text);
+
+    font-family: "DM Sans", sans-serif;
+}
+
+
+/* =========================
+   LINHAS
+   ========================= */
+
+hr {
+    border: 0;
+    border-top: solid 2px #30302f;
+
+    margin: 35px 0;
+}
+
+
+/* =========================
+   CABEÇALHO
+   ========================= */
+
+.stitle {
+    display: flex;
+
+    width: 100%;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.caixa1 {
+    text-align: left;
+    flex: 1;
+}
+
+
+.caixa2 {
+    text-align: right;
+    flex: 1;
+}
+
+
+.title {
+    margin: 0;
+}
+
+
+/* =========================
+   NAVEGAÇÃO
+   ========================= */
+
+nav {
+    text-align: right;
+}
+
+
+a {
+    color: white;
+
+    border: rgb(116, 115, 115) 1px solid;
+
+    padding: 5px 5px;
+
+    border-radius: 5px;
+
+    transition: all 0.2s ease;
+
+    text-decoration: none;
+}
+
+
+a:hover {
+    color: var(--lime);
+
+    border-color: var(--lime);
+
+    background-color: var(--lime-dark);
+}
+
+
+.ppagina {
+    color: red;
+}
+
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+   ========================= */
+
+.container1 {
+    display: flex;
+
+    width: 100%;
+
+    align-items: center;
+}
+
+
+.bloco1 {
+    margin: 10px;
+
+    padding: 20px;
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.bloco2 {
+    padding: 20px;
+
+    flex: 1;
+}
+
+
+/* =========================
+   PROJETO
+   ========================= */
+
+.projeto {
+    color: #92928e;
+}
+
+
+/* =========================
+   TÍTULO PRODUTO
+   ========================= */
+
+.produtos {
+    margin: 26px 0 22px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(58px, 8.7vw, 112px);
+
+    line-height: .84;
+
+    letter-spacing: -.085em;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    font-style: italic;
+}
+
+
+.produtoscolor {
+    color: #0fb100;
+}
+
+
+/* =========================
+   SOUVENIR
+   ========================= */
+
+.produtos1 {
+    color: #ffff00;
+
+    font-size: 50px;
+
+    text-decoration: none;
+
+    font-style: italic;
+}
+
+
+/* =========================
+   DESCRIÇÃO
+   ========================= */
+
+.descricao {
+    padding: 15px;
+
+    color: #92928e;
+
+    font-size: 20px;
+
+    border-left: #0fb100 solid 1px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================
+   DESENVOLVIMENTO
+   ========================= */
+
+.desenvolvimento {
+    color: #92928e;
+
+    font-size: 20px;
+
+    line-height: 1.4;
+}
+
+
+.destaque {
+    color: #ff8800;
+
+    font-size: 20px;
+}
+
+
+.destaque1 {
+    color: #00cafd;
+
+    font-size: 20px;
+}
+
+
+.destaque2 {
+    color: #fd0800;
+
+    font-size: 20px;
+}
+
+
+/* =========================
+   PROPOSTAS
+   ========================= */
+
+.pgtitle {
+    color: #52e752;
+}
+
+
+.propostas {
+    color: #52e752;
+
+    margin: 26px 0 22px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 40px;
+
+    line-height: .84;
+
+    letter-spacing: -.085em;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    font-style: italic;
+}
+
+
+.pparagrafos {
+    color: #92928e;
+
+    line-height: 1.5;
+}
+
+
+.pparagrafos1 {
+    font-style: italic;
+
+    color: white;
+
+    text-decoration: underline;
+
+    text-underline-offset: 5px;
+}
+
+
+.pparagrafos2 {
+    color: #ff8800;
+}
+
+
+.discursao {
+    color: #fff000;
+}
+
+
+/* =========================
+   BOTÃO CONTATO
+   ========================= */
+
+.center {
+    text-align: center;
+
+    margin: 25px 0;
+}
+
+
+.contato {
+    background-color: blue;
+
+    color: white;
+
+    border: solid 1px black;
+
+    text-align: center;
+
+    padding: 8px 15px;
+
+    display: inline-block;
+}
+
+
+/* =========================
+   IMAGEM / GRÁFICO
+   ========================= */
+
+.caixa-imagem {
+    flex: 1;
+
+    width: 100%;
+
+    padding: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.caixa-imagem img {
+    width: 100%;
+
+    max-width: 500px;
+
+    height: auto;
+
+    display: block;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    display: flex;
+
+    width: 100%;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 25px 0;
+}
+
+
+footer .caixa1,
+footer .caixa2 {
+    flex: 1;
+}
+
+
+footer .caixa2 {
+    text-align: right;
+}
+
+
+.direitos,
+.desenvolvedores {
+    color: #92928e;
+
+    font-size: 14px;
+
+    margin: 0;
+}
+
+
+/* =========================
+   RESPONSIVIDADE — CELULAR
+   ========================= */
+
+@media (max-width: 700px) {
+
+    body {
+        margin: 0;
+
+        padding: 25px 20px;
+
+        background-size: 55px 55px;
+
+        overflow-x: hidden;
+    }
+
+
+    /* TOPO */
+
+    .stitle {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 15px;
+    }
+
+
+    .caixa1 {
+        flex: 1;
+
+        min-width: 0;
+    }
+
+
+    .caixa2 {
+        flex: 0 0 auto;
+
+        text-align: right;
+    }
+
+
+    nav {
+        text-align: right;
+    }
+
+
+    nav a,
+    a {
+        font-size: 13px;
+
+        padding: 4px 7px;
+
+        white-space: nowrap;
+    }
+
+
+    /* CONTEÚDO PRINCIPAL */
+
+    .container1 {
+        display: block;
+
+        width: 100%;
+    }
+
+
+    .bloco1,
+    .bloco2 {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 10px 0;
+
+        margin: 0;
+    }
+
+
+    /* PROJETO */
+
+    .projeto {
+        font-size: 13px;
+
+        margin-top: 15px;
+    }
+
+
+    /* TÍTULO */
+
+    .produtos {
+        margin: 22px 0 20px;
+
+        font-size: clamp(48px, 15vw, 75px);
+
+        line-height: .86;
+
+        letter-spacing: -.07em;
+
+        max-width: 100%;
+    }
+
+
+    /* SOUVENIR */
+
+    .produtos1 {
+        font-size: clamp(32px, 9vw, 50px);
+
+        line-height: 1;
+
+        display: block;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* DESCRIÇÃO */
+
+    .descricao {
+        box-sizing: border-box;
+
+        width: 100%;
+
+        padding: 12px 15px;
+
+        font-size: 16px;
+
+        line-height: 1.35;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* DESENVOLVIMENTO */
+
+    .desenvolvimento {
+        font-size: 15px;
+
+        line-height: 1.45;
+    }
+
+
+    .destaque,
+    .destaque1,
+    .destaque2 {
+        font-size: 15px;
+    }
+
+
+    /* PROPOSTAS */
+
+    .propostas {
+        font-size: clamp(28px, 8vw, 40px);
+
+        line-height: .9;
+
+        margin: 20px 0 18px;
+    }
+
+
+    .pparagrafos {
+        font-size: 15px;
+
+        line-height: 1.45;
+    }
+
+
+    .pparagrafos1 {
+        font-size: 14px;
+    }
+
+
+    .discursao {
+        font-size: 20px;
+
+        line-height: 1.1;
+    }
+
+
+    /* PROPOSTAS: texto em cima, imagem embaixo */
+
+    .proposta {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 10px;
+    }
+
+
+    .proposta .caixa1,
+    .proposta .caixa-imagem {
+        flex: none;
+
+        width: 100%;
+    }
+
+
+    /* IMAGEM */
+
+    .caixa-imagem {
+        width: 100%;
+
+        padding: 20px 10px;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+    }
+
+
+    .caixa-imagem img {
+        width: 100%;
+
+        max-width: 450px;
+
+        height: auto;
+
+        display: block;
+    }
+
+
+    /* LINHAS */
+
+    hr {
+        margin: 25px 0;
+
+        border-width: 1px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 5px;
+
+        padding: 20px 0;
+    }
+
+
+    footer .caixa1,
+    footer .caixa2 {
+        width: 100%;
+
+        text-align: left;
+    }
+
+
+    .direitos,
+    .desenvolvedores {
+        font-size: 12px;
+
+        line-height: 1.4;
+    }
+
+}
