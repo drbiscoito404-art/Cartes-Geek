@@ -1,0 +1,937 @@
+:root {
+    --bg: #050505;
+    --panel: #0b0b0b;
+    --text: #f5f5f2;
+    --muted: #92928e;
+    --line: rgba(255,255,255,.09);
+
+    --lime: #c6f36b;
+    --lime-dark: rgba(198,243,107,.13);
+
+    --max: 1240px;
+}
+
+
+/* =========================
+   BASE
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 60px;
+
+    background-color: var(--bg);
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 80px 80px;
+
+    color: var(--text);
+
+    font-family: "DM Sans", sans-serif;
+}
+
+
+/* =========================
+   LINHAS
+   ========================= */
+
+hr {
+    border: 0;
+    border-top: solid 2px #30302f;
+
+    margin: 35px 0;
+}
+
+
+/* =========================
+   CABEÇALHO
+   ========================= */
+
+.stitle {
+    display: flex;
+
+    width: 100%;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.caixa1 {
+    text-align: left;
+    flex: 1;
+}
+
+
+.caixa2 {
+    text-align: right;
+    flex: 1;
+}
+
+
+.title {
+    margin: 0;
+}
+
+
+/* =========================
+   NAVEGAÇÃO
+   ========================= */
+
+nav {
+    text-align: right;
+}
+
+
+nav a {
+    color: white;
+
+    border: rgb(116, 115, 115) 1px solid;
+
+    padding: 5px 5px;
+
+    border-radius: 5px;
+
+    transition: all 0.2s ease;
+
+    text-decoration: none;
+
+    margin-left: 4px;
+}
+
+
+nav a:hover {
+    color: var(--lime);
+
+    border-color: var(--lime);
+
+    background-color: var(--lime-dark);
+}
+
+
+.ppagina {
+    color: red;
+}
+
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+   ========================= */
+
+.container1 {
+    display: flex;
+
+    width: 100%;
+
+    align-items: center;
+
+    min-height: 450px;
+}
+
+
+.bloco1 {
+    margin: 10px;
+
+    padding: 20px;
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+.cxbutton{
+    flex: 1;
+    text-align: center;
+    margin: 25px 0;
+}
+.iabutton{
+background-color: cyan;
+
+color: black;
+
+border-radius: 5px;
+
+border: solid 2px white;
+
+text-align: center;
+
+padding: 8px 15px;
+
+display: inline-block;
+    
+}
+
+/* =========================
+   IDENTIFICAÇÃO
+   ========================= */
+
+.projeto {
+    color: var(--muted);
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   TÍTULO
+   ========================= */
+
+.titulo {
+    margin: 26px 0 22px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(58px, 8.7vw, 112px);
+
+    line-height: .84;
+
+    letter-spacing: -.085em;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    font-style: italic;
+}
+
+
+.titulocolor {
+    color: #0fb100;
+}
+
+
+.subtitulo {
+    color: #fff000;
+
+    font-size: 25px;
+
+    text-transform: uppercase;
+
+    font-style: italic;
+}
+
+
+/* =========================
+   DESCRIÇÃO
+   ========================= */
+
+.descricao {
+    padding: 15px;
+
+    color: var(--muted);
+
+    font-size: 20px;
+
+    border-left: #0fb100 solid 1px;
+
+    line-height: 1.4;
+
+    max-width: 700px;
+}
+
+
+/* =========================
+   CARD DA IA
+   ========================= */
+
+.caixa-ia {
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+}
+
+
+.ia-card {
+    width: 100%;
+
+    max-width: 430px;
+
+    padding: 45px 35px;
+
+    background: var(--panel);
+
+    border: 1px solid #30302f;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    box-shadow: 0 0 40px rgba(198,243,107,.04);
+}
+
+
+.ia-icon {
+    width: 85px;
+
+    height: 85px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 2px solid var(--lime);
+
+    color: var(--lime);
+
+    border-radius: 50%;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.ia-card h2 {
+    font-size: 30px;
+
+    margin: 0 0 15px;
+
+    text-transform: uppercase;
+
+    font-style: italic;
+}
+
+
+.ia-card h2 span {
+    color: var(--lime);
+
+    display: block;
+}
+
+
+.ia-card p {
+    color: var(--muted);
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   TÍTULOS DE SEÇÃO
+   ========================= */
+
+.pgtitle {
+    color: #52e752;
+
+    margin-top: 30px;
+}
+
+
+.propostas {
+    color: #52e752;
+
+    margin: 26px 0 22px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 40px;
+
+    line-height: .84;
+
+    letter-spacing: -.085em;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    font-style: italic;
+}
+
+
+.amarelo {
+    color: #fff000;
+}
+
+
+/* =========================
+   BLOCOS
+   ========================= */
+
+.bloco-info {
+    align-items: flex-start;
+
+    margin-bottom: 20px;
+}
+
+
+.pparagrafos {
+    color: var(--muted);
+
+    line-height: 1.5;
+
+    max-width: 700px;
+}
+
+
+.destaque-texto {
+    color: white;
+
+    font-style: italic;
+
+    text-decoration: underline;
+
+    text-underline-offset: 5px;
+}
+
+
+/* =========================
+   LISTA
+   ========================= */
+
+.lista {
+    padding: 20px 30px;
+
+    border-left: 1px solid #30302f;
+}
+
+
+.lista p {
+    color: var(--muted);
+
+    font-size: 18px;
+
+    line-height: 1.5;
+}
+
+
+.lista p:first-child {
+    color: var(--lime);
+}
+
+
+/* =========================
+   ALERTA
+   ========================= */
+
+.alerta {
+    flex: 1;
+
+    padding: 25px;
+
+    border: 1px solid #7b7100;
+
+    background: rgba(255,240,0,.04);
+
+    border-radius: 5px;
+}
+
+
+.alerta strong {
+    color: #fff000;
+
+    font-size: 22px;
+
+    font-style: italic;
+}
+
+
+.alerta p {
+    color: var(--muted);
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   ESCOPO
+   ========================= */
+
+.escopo {
+    padding: 10px 20px 30px;
+}
+
+
+.limite {
+    display: flex;
+
+    gap: 25px;
+
+    margin-top: 30px;
+}
+
+
+.permitido,
+.nao-permitido {
+    flex: 1;
+
+    display: flex;
+
+    gap: 20px;
+
+    padding: 25px;
+
+    background: var(--panel);
+
+    border: 1px solid #30302f;
+
+    border-radius: 5px;
+}
+
+
+.permitido span {
+    color: #0fb100;
+
+    font-size: 35px;
+}
+
+
+.nao-permitido span {
+    color: red;
+
+    font-size: 35px;
+}
+
+
+.permitido h3 {
+    color: #0fb100;
+}
+
+
+.nao-permitido h3 {
+    color: red;
+}
+
+
+.permitido p,
+.nao-permitido p {
+    color: var(--muted);
+
+    line-height: 1.5;
+
+    margin: 0;
+}
+
+
+/* =========================
+   EXEMPLOS
+   ========================= */
+
+.exemplo {
+    display: block;
+
+    width: fit-content;
+
+    padding: 10px 15px;
+
+    margin: 10px 0;
+
+    color: white;
+
+    border-left: 2px solid var(--lime);
+
+    background: rgba(255,255,255,.025);
+
+    font-style: italic;
+}
+
+
+/* =========================
+   AVISO FINAL
+   ========================= */
+
+.aviso-final {
+    padding: 60px 20px;
+
+    text-align: center;
+
+    border: 1px solid #30302f;
+
+    background: rgba(255,255,255,.015);
+
+    border-radius: 5px;
+}
+
+
+.aviso-final .mini {
+    color: var(--muted);
+
+    letter-spacing: 2px;
+
+    font-size: 13px;
+}
+
+
+.aviso-final h2 {
+    font-size: clamp(35px, 6vw, 70px);
+
+    line-height: .9;
+
+    font-style: italic;
+
+    letter-spacing: -.06em;
+}
+
+
+.aviso-final h2 span {
+    color: var(--lime);
+}
+
+
+.aviso-final > p:last-child {
+    color: var(--muted);
+
+    max-width: 650px;
+
+    margin: auto;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    display: flex;
+
+    width: 100%;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 25px 0;
+}
+
+
+footer .caixa1,
+footer .caixa2 {
+    flex: 1;
+}
+
+
+footer .caixa2 {
+    text-align: right;
+}
+
+
+.direitos,
+.desenvolvedores {
+    color: var(--muted);
+
+    font-size: 14px;
+
+    margin: 0;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    body {
+        margin: 0;
+
+        padding: 25px 20px;
+
+        background-size: 55px 55px;
+
+        overflow-x: hidden;
+    }
+
+
+    /* TOPO */
+
+    .stitle {
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 10px;
+    }
+
+
+    .caixa1 {
+        min-width: 0;
+    }
+
+
+    .caixa2 {
+        flex: 0 0 auto;
+    }
+
+
+    nav {
+        text-align: right;
+    }
+
+
+    nav a {
+        font-size: 12px;
+
+        padding: 4px 6px;
+
+        white-space: nowrap;
+
+        margin-left: 2px;
+    }
+
+
+    /* CONTEÚDO */
+
+    .container1 {
+        display: block;
+
+        min-height: auto;
+    }
+
+
+    .bloco1 {
+        width: 100%;
+
+        padding: 10px 0;
+
+        margin: 0;
+    }
+
+
+    .projeto {
+        font-size: 13px;
+
+        margin-top: 15px;
+    }
+
+
+    /* TÍTULO */
+
+    .titulo {
+        margin: 22px 0 20px;
+
+        font-size: clamp(48px, 15vw, 75px);
+
+        line-height: .86;
+
+        letter-spacing: -.07em;
+    }
+
+
+    .subtitulo {
+        font-size: 19px;
+
+        line-height: 1.1;
+    }
+
+
+    .descricao {
+        width: 100%;
+
+        padding: 12px 15px;
+
+        font-size: 16px;
+
+        line-height: 1.35;
+    }
+
+
+    /* CARD */
+
+    .caixa-ia {
+        width: 100%;
+
+        padding: 25px 5px;
+    }
+
+
+    .ia-card {
+        padding: 35px 20px;
+    }
+
+
+    .ia-icon {
+        width: 70px;
+
+        height: 70px;
+
+        font-size: 20px;
+    }
+
+
+    .ia-card h2 {
+        font-size: 25px;
+    }
+
+
+    /* SEÇÕES */
+
+    .pgtitle {
+        font-size: 15px;
+    }
+
+
+    .propostas {
+        font-size: clamp(28px, 8vw, 40px);
+
+        line-height: .9;
+
+        margin: 20px 0 18px;
+    }
+
+
+    .pparagrafos {
+        font-size: 15px;
+
+        line-height: 1.45;
+    }
+
+
+    /* BLOCOS */
+
+    .bloco-info {
+        display: block;
+    }
+
+
+    .lista {
+        padding: 10px 15px;
+
+        margin-top: 20px;
+
+        border-left: 2px solid #30302f;
+    }
+
+
+    .lista p {
+        font-size: 15px;
+    }
+
+
+    /* ALERTA */
+
+    .alerta {
+        margin-top: 25px;
+
+        padding: 20px;
+    }
+
+
+    /* ESCOPO */
+
+    .escopo {
+        padding: 10px 0 25px;
+    }
+
+
+    .limite {
+        display: block;
+
+        margin-top: 20px;
+    }
+
+
+    .permitido,
+    .nao-permitido {
+        margin-bottom: 15px;
+
+        padding: 20px;
+
+        gap: 15px;
+    }
+
+
+    .permitido span,
+    .nao-permitido span {
+        font-size: 28px;
+    }
+
+
+    .permitido h3,
+    .nao-permitido h3 {
+        margin-top: 0;
+
+        font-size: 15px;
+    }
+
+
+    .permitido p,
+    .nao-permitido p {
+        font-size: 14px;
+    }
+
+
+    /* EXEMPLOS */
+
+    .exemplo {
+        width: 100%;
+
+        font-size: 14px;
+    }
+
+
+    /* AVISO */
+
+    .aviso-final {
+        padding: 40px 15px;
+    }
+
+
+    .aviso-final h2 {
+        font-size: 38px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 5px;
+
+        padding: 20px 0;
+    }
+
+
+    footer .caixa1,
+    footer .caixa2 {
+        width: 100%;
+
+        text-align: left;
+    }
+
+
+    .direitos,
+    .desenvolvedores {
+        font-size: 12px;
+    }
+
+}

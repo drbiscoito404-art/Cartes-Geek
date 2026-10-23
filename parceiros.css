@@ -1,0 +1,655 @@
+:root {
+    --bg: #050505;
+    --panel: #0b0b0b;
+    --text: #f5f5f2;
+    --muted: #92928e;
+    --line: rgba(255,255,255,.09);
+
+    --lime: #c6f36b;
+    --lime-dark: rgba(198,243,107,.13);
+
+    --max: 1240px;
+}
+
+
+/* =========================
+   BASE
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 60px;
+
+    background-color: var(--bg);
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 80px 80px;
+
+    color: var(--text);
+
+    font-family: "DM Sans", sans-serif;
+}
+
+
+/* =========================
+   LINHAS
+   ========================= */
+
+hr {
+    border: 0;
+
+    border-top: solid 2px #30302f;
+
+    margin: 35px 0;
+}
+
+
+/* =========================
+   CABEÇALHO / NAV
+   ========================= */
+
+.stitle {
+    display: flex;
+
+    width: 100%;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.caixa1 {
+    text-align: left;
+
+    flex: 1;
+}
+
+
+.caixa2 {
+    text-align: right;
+
+    flex: 1;
+}
+
+
+.title {
+    margin: 0;
+}
+
+
+/* =========================
+   NAVEGAÇÃO
+   ========================= */
+
+nav {
+    text-align: right;
+}
+
+
+a {
+    color: white;
+
+    border: rgb(116, 115, 115) 1px solid;
+
+    padding: 5px 5px;
+
+    border-radius: 5px;
+
+    transition: all 0.2s ease;
+
+    text-decoration: none;
+}
+
+
+a:hover {
+    color: var(--lime);
+
+    border-color: var(--lime);
+
+    background-color: var(--lime-dark);
+}
+
+
+.ppagina {
+    color: red;
+}
+
+
+/* =========================
+   CABEÇALHO DA PÁGINA
+   ========================= */
+
+.cabecalho {
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 40px auto 0;
+
+    padding: 20px;
+}
+
+
+.projeto {
+    color: var(--muted);
+
+    font-size: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.titulo {
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(60px, 10vw, 125px);
+
+    line-height: .82;
+
+    letter-spacing: -.085em;
+
+    font-weight: 700;
+
+    font-style: italic;
+
+    text-transform: uppercase;
+}
+
+
+.titulo span {
+    display: block;
+
+    color: #52e752;
+}
+
+
+.descricao-principal {
+    max-width: 650px;
+
+    margin-top: 35px;
+
+    padding-left: 15px;
+
+    border-left: #52e752 solid 1px;
+
+    color: var(--muted);
+
+    font-size: 20px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================
+   TÍTULO DAS PARCERIAS
+   ========================= */
+
+.pgtitle {
+    color: #52e752;
+
+    font-size: 16px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   BLOCO DE PARCERIA
+   ========================= */
+
+.parceria {
+    display: flex;
+
+    width: 100%;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 25px 0;
+}
+
+
+.parceria .caixa1 {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 20px;
+}
+
+
+.parceria .caixa-imagem {
+    flex: 1;
+
+    width: 100%;
+
+    padding: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =========================
+   INFORMAÇÕES
+   ========================= */
+
+.numero {
+    color: var(--muted);
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+
+.nome-parceria {
+    margin: 0 0 15px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(45px, 6vw, 80px);
+
+    line-height: .86;
+
+    letter-spacing: -.07em;
+
+    font-style: italic;
+
+    text-transform: uppercase;
+}
+
+
+.nome-parceria span {
+    display: block;
+
+    color: #fff000;
+}
+
+
+.categoria {
+    color: #52e752;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+.texto {
+    color: var(--muted);
+
+    font-size: 18px;
+
+    line-height: 1.5;
+
+    max-width: 600px;
+}
+
+
+.texto-destaque {
+    color: white;
+
+    font-style: italic;
+
+    text-decoration: underline;
+
+    text-underline-offset: 5px;
+}
+
+
+/* =========================
+   IMAGEM
+   ========================= */
+    
+    .caixa-imagem{
+        border: 1px white solid;
+    }
+.parceria .caixa-imagem img {
+    width: 100%;
+
+    max-width: 500px;
+
+    height: auto;
+
+    display: block;
+}
+
+
+/* =========================
+   BOTÃO
+   ========================= */
+
+.center {
+    text-align: left;
+
+    margin-top: 30px;
+}
+
+
+.botao {
+    display: inline-block;
+
+    background-color: blue;
+
+    color: white;
+
+    border: solid 1px black;
+
+    padding: 8px 15px;
+}
+
+
+.botao:hover {
+    color: white;
+
+    background-color: #0000cc;
+
+    border-color: white;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    display: flex;
+
+    width: 100%;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 25px 0;
+}
+
+
+footer .caixa1,
+footer .caixa2 {
+    flex: 1;
+}
+
+
+footer .caixa2 {
+    text-align: right;
+}
+
+
+.direitos,
+.desenvolvedores {
+    color: var(--muted);
+
+    font-size: 14px;
+
+    margin: 0;
+}
+
+
+/* =========================
+   RESPONSIVIDADE — CELULAR
+   ========================= */
+
+@media (max-width: 700px) {
+
+    body {
+        margin: 0;
+
+        padding: 25px 20px;
+
+        background-size: 55px 55px;
+
+        overflow-x: hidden;
+    }
+
+
+    /* TOPO */
+
+    .stitle {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 15px;
+    }
+
+
+    .caixa1 {
+        flex: 1;
+
+        min-width: 0;
+    }
+
+
+    .caixa2 {
+        flex: 0 0 auto;
+
+        text-align: right;
+    }
+
+
+    nav {
+        text-align: right;
+    }
+
+
+    nav a,
+    a {
+        font-size: 13px;
+
+        padding: 4px 7px;
+
+        white-space: nowrap;
+    }
+
+
+    /* CABEÇALHO */
+
+    .cabecalho {
+        width: 100%;
+
+        padding: 10px 0;
+
+        margin-top: 30px;
+    }
+
+
+    .projeto {
+        font-size: 13px;
+
+        margin-top: 15px;
+    }
+
+
+    .titulo {
+        font-size: clamp(48px, 15vw, 75px);
+
+        line-height: .86;
+
+        letter-spacing: -.07em;
+    }
+
+
+    .descricao-principal {
+        font-size: 16px;
+
+        line-height: 1.4;
+
+        margin-top: 25px;
+
+        padding-left: 12px;
+    }
+
+
+    /* PARCERIA */
+
+    .parceria {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 10px;
+
+        padding: 10px 0;
+    }
+
+
+    .parceria .caixa1 {
+        width: 100%;
+
+        padding: 10px 0;
+    }
+
+
+    .numero {
+        font-size: 12px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .nome-parceria {
+        font-size: clamp(38px, 12vw, 65px);
+
+        line-height: .88;
+    }
+
+
+    .categoria {
+        font-size: 13px;
+    }
+
+
+    .texto {
+        font-size: 15px;
+
+        line-height: 1.45;
+    }
+
+
+    .texto-destaque {
+        font-size: 14px;
+    }
+
+
+    /* IMAGEM */
+    
+    .caixa-imagem{
+        border: 1px white solid;
+    }
+    .parceria .caixa-imagem {
+        width: 100%;
+
+        padding: 20px 10px;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+    }
+
+
+    .parceria .caixa-imagem img {
+        width: 100%;
+
+        max-width: 450px;
+
+        height: auto;
+    }
+
+
+    /* BOTÃO */
+
+    .center {
+        text-align: center;
+
+        margin-top: 25px;
+    }
+
+
+    .botao {
+        padding: 8px 15px;
+
+        font-size: 14px;
+    }
+
+
+    /* LINHAS */
+
+    hr {
+        margin: 25px 0;
+
+        border-width: 1px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 5px;
+
+        padding: 20px 0;
+    }
+
+
+    footer .caixa1,
+    footer .caixa2 {
+        width: 100%;
+
+        text-align: left;
+    }
+
+
+    .direitos,
+    .desenvolvedores {
+        font-size: 12px;
+
+        line-height: 1.4;
+    }
+
+}
